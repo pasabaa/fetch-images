@@ -22,3 +22,8 @@ body {
 #main {
     display: none;
 }
+
+#data > .card-none{
+    width: 100%;
+    background-color: whitesmoke;
+}

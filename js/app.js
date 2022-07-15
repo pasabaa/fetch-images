@@ -61,10 +61,11 @@ const loadData = async() => {
     });
 
     if (imagesArray.length === 0) {
-        showImages = `<div class="card text-center m-4 border-0 m-auto">
-        <div class="card-body text-muted">
-            <h1>Nothing found</h1>
-            <h4>Try searching again</h4>
+        showImages = `<div class="card text-center m-4 border-0 m-auto card-none">
+        <div class="card-body">
+            <p class="display-6"><i class="bi bi-eyeglasses"></i></p>
+            <h1 class="text-muted">Nothing found</h1>
+            <p class"fw-light h4">Try searching again</p>
         </div>
     </div>`;
     }
@@ -84,6 +85,12 @@ const loadData = async() => {
     totalPages = Math.ceil(result.totalHits/imgPerPage);
 
     let pagination = document.querySelector('#pagination');
+
+    if(imagesArray.length === 0) {
+        pagination.style.display = 'none';
+    } else {
+        pagination.style.display = 'block';
+    }
 
     let backPage = (currentPage === 1) ? ``:`<button type="button" class="btn btn-sm btn-dark" onClick="backPage()">Back</button>`;
 
