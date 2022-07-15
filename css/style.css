@@ -1,0 +1,24 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css");
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fs-sm {
+    font-size: .8rem;
+}
+
+.fs-sm-title {
+    font-size: .9rem;
+}
+
+
+.bg-overlay {
+    background-color: rgba(0, 0, 0, 0.64);
+    backdrop-filter: blur(24px);
+}
+
+#main {
+    display: none;
+}
