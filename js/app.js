@@ -63,12 +63,16 @@ const loadData = async() => {
     if (imagesArray.length === 0) {
         showImages = `<div class="card text-center m-4 border-0 m-auto card-none">
         <div class="card-body">
-            <p class="display-6"><i class="bi bi-eyeglasses"></i></p>
+            <img src="img/Easter bunny_Monochromatic.png" class="img-fluid" alt="Easter bunny Monochromatic" width="300">
             <h1 class="text-muted">Nothing found</h1>
             <p class"fw-light h4">Try searching again</p>
         </div>
     </div>`;
     }
+
+    let welcomeImg = document.querySelector('#welcome-img');
+
+    welcomeImg.style.display = 'none';
 
     let showMain = document.querySelector('#main');
 
