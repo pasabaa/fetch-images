@@ -92,9 +92,9 @@ const loadData = async() => {
         pagination.style.display = 'block';
     }
 
-    let backPage = (currentPage === 1) ? ``:`<button type="button" class="btn btn-sm btn-dark" onClick="backPage()">Back</button>`;
+    let backPage = (currentPage === 1) ? ``:`<button type="button" class="btn btn-sm bg-green rounded-pill fw-bold" onClick="backPage()"><i class="bi bi-caret-left-fill"></i> Back</button>`;
 
-    let nextPage = (currentPage === totalPages) ? ``:`<button type="button" class="btn btn-sm btn-dark" onClick="nextPage()">Next</button>`;
+    let nextPage = (currentPage === totalPages) ? ``:`<button type="button" class="btn btn-sm bg-green rounded-pill fw-bold" onClick="nextPage()">Next <i class="bi bi-caret-right-fill"></i></button>`;
 
     pagination.innerHTML = `${backPage} ${nextPage}`;
 
